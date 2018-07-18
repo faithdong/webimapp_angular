@@ -1,0 +1,20 @@
+<ion-header-bar class="bar-blue bar-positive" align-title="center">
+    <button class="button icon-left ion-chevron-left" ng-click="goback()"> 返回</button>
+    <div class="h1 title">我的群组</div>
+    <button class="button" ng-click="addgroup()"> <i class="icon ion-plus"></i></button>
+
+</ion-header-bar>
+
+
+    <ion-content >
+        <ion-list  >
+
+            <ion-item class="item-avatar" ng-repeat="group in groups" ng-click="gotogroupchat(group)">
+                <img ng-src="{{group.img}}">
+                <h2>{{group.name}}</h2>
+                <p class="rj-list-p" >{{group.numberOfMembers}}</p>
+            </ion-item>
+
+        </ion-list>
+
+    </ion-content>

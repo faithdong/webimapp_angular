@@ -1,0 +1,35 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button icon-left ion-chevron-left" ui-sref="tab.message">
+            返回
+        </button>
+    </div>
+    <div class="title">聊天设置</div>
+
+</ion-header-bar>
+<ion-view>
+    <ion-content >
+        <ion-list class="list">
+            <ion-item  class="item item-input">
+                <label class="input-label">头像</label>
+                <img src={{pic}} alt="" width="30" height="30" class="chatSetting_headImg">
+            </ion-item>
+            <ion-item  class="item item-input">
+                <label class="input-label">姓名</label>
+                <span ng-bind="name"></span>
+            </ion-item>
+            <ion-item  class="item item-input">
+                <label class="input-label">电话</label>
+                <span ng-bind="tel"></span>
+            </ion-item>
+            <ion-item  class="item item-input">
+                <label class="input-label">邮箱</label>
+                <span ng-bind="email"></span>
+            </ion-item>
+            <ion-item  class="item item-input item-button-right" ng-click="toChatHistory()">
+                <label class="input-label">聊天记录</label>
+                <a class="button button-clear icon ion-ios-arrow-right"></a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

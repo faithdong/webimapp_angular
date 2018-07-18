@@ -1,0 +1,25 @@
+<ion-header-bar class="bar-blue bar-positive">
+    <button class="button " ng-click="docancel()">取消</button>
+    <div class="h1 title">创建群组</div>
+
+</ion-header-bar>
+
+<ion-view>
+    <ion-content>
+
+        <div class=" creategroup ">
+            <label class="item item-input">
+                <input type="text" placeholder="群名称" class="text-center " ng-model="creategroup_next.groupname">
+            </label>
+        </div>
+
+
+        <div class=" text-center creategroup">
+        <button  class="button button-positive" ng-click="creategroup_next()">
+            下一步
+        </button>
+        </div>
+
+    </ion-content>
+</ion-view>
+

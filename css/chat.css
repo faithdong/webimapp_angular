@@ -1,0 +1,111 @@
+*{margin: 0px;padding: 0px}
+.body{
+    background: #efeff5;
+}
+.common{
+    margin-top: 20px;
+}
+.common:nth-child(1){
+    margin-top: 0px;
+}
+.getInfo{
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.getInfo .head{
+    float: left;
+    width: 55px;
+    padding-left: 12px;
+    box-sizing: border-box;
+}
+.getInfo .head .head_img{
+    border-radius: 50%;
+}
+.getInfo .content{
+    max-width: 7rem;
+    font-size: 15px;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+}
+.getInfo .content img.icon{
+    position: absolute;
+    top: 38px;
+    left: -15px;
+}
+.getInfo .content .name{
+    padding-left: 5px;
+    padding-bottom: 10px;
+    color: rgb(102,102,102);
+    box-sizing: border-box;
+}
+.getInfo .content .info{
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 10px;
+    background: #fff;
+    letter-spacing: 2px;
+    line-height: 20px;
+    color: rgb(102,102,102);
+    box-sizing: border-box;
+
+}
+.getInfo .content .info .text{
+    line-height: 20px;
+    font-size: 14px;
+    text-indent: 2px;
+    word-break:break-all;
+}
+.postInfo{
+    overflow: hidden;
+}
+.postInfo .head{
+    width: 53px;
+    float: right;
+    padding-right: 12px;
+    box-sizing: border-box;
+}
+.postInfo .head .head_img{
+    border-radius: 50%;
+}
+.postInfo .content{
+    font-size: 15px;
+    max-width: 7rem;
+    float: right;
+    position: relative;
+    box-sizing: border-box;
+}
+.postInfo .content img.icon{
+    position: absolute;
+    top: 38px;
+    right: -15px;
+}
+.postInfo .content .name{
+    width: 7rem;
+    text-align: right;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    color: rgb(102,102,102);
+    box-sizing: border-box;
+}
+.postInfo .content .info{
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 10px;
+    background: #fff;
+    color: rgb(102,102,102);
+    letter-spacing: 2px;
+    line-height: 20px;
+    box-sizing: border-box;
+    float: right;
+}
+.postInfo .content .info .text{
+    line-height: 20px;
+    font-size: 14px;
+    text-indent: 2px;
+    word-break:break-all;
+}
+
+

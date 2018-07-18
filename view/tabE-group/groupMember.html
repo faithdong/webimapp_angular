@@ -1,0 +1,20 @@
+<ion-header-bar align-title="cnter" class="bar bar-positive">
+    <button class="button icon-left ion-chevron-left" ng-click="goback()">返回</button>
+    <h1 class="title">群成员</h1>
+</ion-header-bar>
+
+<ion-view>
+    <ion-content class="bg-gray">
+        <div class="group-panel" >
+            <div class="group-member" ng-repeat="groupmember in groupmembers" ng-click="gotochat()">
+                <img  src="{{groupmember.photo}}" alt="" class="member-logo"><span class="member-name">{{groupmember.name}}</span>
+            </div>
+            <div class="group-member " ng-click="ToChooseMember()" ><img  src="img/add.png" alt="" class="member-logo"></div>
+        </div>
+        <p class="item  item-icon-right" ng-click="gotogroupfile()">群文件 <i class="icon ion-chevron-right"></i></p>
+        <p class="item item-icon-right" ng-click ="toChatHistory()">聊天记录 <i class="icon ion-chevron-right"></i></p>
+        <p class="padding ">
+            <button class="button  button-block button-assertive" ng-click="exit()">退出群</button>
+        </p>
+    </ion-content>
+</ion-view>

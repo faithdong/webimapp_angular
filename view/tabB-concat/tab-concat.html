@@ -1,0 +1,47 @@
+<ion-header-bar class="bar-positive" align-title="center">
+    <button id="friends_button" style="display:none" class="button icon-left ion-chevron-left" ng-click="back()">返回</button>
+    <div class="title">
+        联系人
+    </div>
+</ion-header-bar>
+
+
+    <ion-content class="bg-gray" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+
+
+
+        <label class=" chooseMember_search " ng-click="gotoSearch()">
+            <!--<i class="icon ion-search placeholder-icon "></i>-->
+            <p class="item text-center"> <i class="icon ion-ios-search-strong"></i> 搜索</p>
+        </label>
+
+
+
+        <p  class="item  item-avatar item-icon-right margin-bottom" ng-click="gotomygroup()">
+            <img src="img/group.png" >
+            <Text style="line-height: 40px">我的群组</Text>
+        </p>
+
+
+
+        <ion-list >
+            <ion-item  class="item-avatar" ng-repeat="org in orgs | filter:{'uporgcode':orgcode,'nodetype':'1' } "  ng-click="friendinfo(org)">
+                <img class="head-icon" src={{(org.photo!='')?data.photophoto:"img/adam.jpg"}}>
+                <span class="find-item-name">{{org.name}}</span>
+            </ion-item>
+        </ion-list>
+        <ion-list  >
+            <ion-item class="item item-icon-right" ng-repeat="org in orgs | filter:{'uporgcode':orgcode,'nodetype':'0' }"  ng-click="gotopage(org.orgcode)">
+
+                <div>{{org.orgname}}</div>
+                <i class="icon ion-chevron-right"></i>
+
+            </ion-item>
+        </ion-list>
+
+
+
+
+
+    </ion-content>
+

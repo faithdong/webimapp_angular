@@ -1,0 +1,139 @@
+@charset "UTF-8";
+.padding {
+  padding: 15px; }
+
+.card {
+  margin: 5px; }
+  .item {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.5; }
+    .item .icon {
+      color: #999999;
+      font-size: 14px; }
+  .card .item-text-wrap {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5; }
+    .card .item-text-wrap .notifypre {
+      /*文本两行超出部分溢出 (if error) 可能存在手机不能正常显示的错误*/
+      width: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden; }
+  .card .item-header {
+    font-size: 16px; }
+
+.noborder {
+  border: none; }
+
+.notifypre, .notifyDate, .find-item-name {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333; }
+
+.notifyDate {
+  text-align: right; }
+
+.item .find-item-name {
+  color: #333333;
+  font-size: 16px;
+  line-height: 40px; }
+
+.head-icon {
+  border-radius: 100% 100%; }
+
+.item-avatar > img:first-child, .item-avatar .item-content > img:first-child {
+  border-radius: 100% 100%; }
+
+.bg-gray {
+  background-color: #efeff4; }
+
+.bar .title + .buttons {
+  right: 10px; }
+  .bar .title + .buttons button {
+    border-color: transparent;
+    font-size: 16px; }
+
+.bar-positive .button {
+  border-color: transparent;
+  font-size: 16px; }
+
+.bar .title {
+  margin-right: 0; }
+
+.float-right {
+  position: absolute;
+  right: 15px; }
+
+.news-cont {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 6px;
+  background-color: #ff2e3e;
+  color: white;
+  font-size: 12px;
+  border-radius: 9px;
+  text-align: center;
+  min-width: 12px; }
+
+.margin-bottom {
+  margin-bottom: 15px; }
+  .margin-bottom .list:last-child {
+    margin-bottom: 15px; }
+
+.btn-full {
+  padding: 0 15px; }
+  .btn-full .button-error {
+    border: none; }
+
+.position-r-15 {
+  position: absolute;
+  right: 5px;
+  text-align: right; }
+
+.bg-img {
+  background: url("../img/my_bg.png") no-repeat;
+  background-size: cover;
+  background-position: 0 -20px; }
+
+.hasfooter {
+  bottom: 44px; }
+
+.hasexpression {
+  bottom: 123px; }
+
+.hasexpressionandfooter {
+  bottom: 167px !important; }
+
+.bottom0 {
+  bottom: 0; }
+
+.expressionPanel {
+  bottom: 0;
+  height: 123px; }
+  .expressionPanel .face-panel {
+    overflow-y: auto; }
+    .expressionPanel .face-panel span {
+      display: inline-block;
+      width: 12.5%;
+      text-align: center; }
+      .expressionPanel .face-panel span img {
+        margin: 2px;
+        width: 29px;
+        height: 29px; }
+
+.rj-message-wrap .rj-message, .rj-message-wrap .rj-message-right span {
+  vertical-align: bottom; }
+  .rj-message-wrap .rj-message img, .rj-message-wrap .rj-message-right span img {
+    vertical-align: bottom; }
+
+.rj-footer-btn-wrap .rj-send-button {
+  left: -5px; }
+
+.rj-message-wrap .rj-message img, .rj-message-wrap .rj-message-right span img {
+  max-width: 173px; }
+
+/*# sourceMappingURL=notify.css.map */

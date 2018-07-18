@@ -1,0 +1,20 @@
+<ion-content class="login_bg">
+
+     <div align="center">
+         <image src="img/loginlogo.png"  class="login_image "></image>
+     </div>
+
+    <div class="list padding">
+        <label class="item item-input">
+            <input type="text" placeholder="账号/手机号" ng-model="login.username">
+        </label>
+        <label class="item item-input">
+            <input type="password" placeholder="密码" ng-model="login.password">
+        </label>
+    </div>
+
+    <div class="padding">
+        <button class="button button-block button-positive" ng-click="login()">登录</button>
+    </div>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header-bar align-title="cnter" class="bar-positive">
+    <div class="buttons">
+        <button class="button" ng-click="goBack()">取消</button>
+    </div>
+    <div class="title">
+        选择成员
+    </div>
+</ion-header-bar>
+<ion-content class="has-header bg-gray">
+    <div class="chooseMember_search">
+        <label><img src="img/icon_Search.png" alt="" width="20" height="20" style="vertical-align: middle">搜索</label>
+        <input type="text" ng-click="search()">
+    </div>
+    <div style="color: #333;margin-left: 10px;margin-bottom: 10px;cursor: pointer;display: none" ng-click="back()" id="btn">返回</div>
+    <ion-list class="list margin-bottom">
+        <ion-item class="item item-checkbox margin-bottom" ng-click="selactAll()">
+            <label class="checkbox"><input type="checkbox" class="selactAll"></label>
+            <span>全选</span>
+        </ion-item>
+        <ion-item class="item item-avatar item-checkbox" ng-repeat="item in org |filter:{'nodetype':'1','uporgcode':orgcode1} " ng-click="selectMember(item.username)">
+            <label class="checkbox"><input data-username={{item.username}} type="checkbox" class="selectMember" ng-model="isChecked"></label>
+            <img src="img/adam.jpg" width="40" height="40" style="border-radius: 50%;vertical-align: middle" >
+            <span ng-bind="item.name"></span>
+        </ion-item>
+    </ion-list>
+    <ion-list class="list">
+        <ion-item class="item item-icon-right" ng-click="openorg(key.orgcode)" ng-repeat="key in org |filter:{'nodetype':'0','uporgcode':orgcode1} |limitTo:20">
+            <div ng-bind="key.orgname"></div>
+            <i class="icon ion-chevron-right"></i>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer-bar align-title="left">
+    <h1 class="title">已经选择<span ng-bind="num"></span></h1>
+    <a class="button button-clear icon positive-bg" ng-click="toGroupMember()" style="color: #0a9dc7">确定</a>
+</ion-footer-bar>

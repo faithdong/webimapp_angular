@@ -1,0 +1,193 @@
+/* Empty. Add your own CSS if you like */
+/*personInfor start*/
+.personInforBg{
+    height: 200px;
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.personInforBg .img{
+    height: 80px;
+}
+.personInforBg img{
+    border-radius: 50%;
+}
+.personInforBg .name{
+    color: #fff;
+    padding-top: 10px;
+    font-size: 18px;
+}
+.personInfor_fontColor{
+    color: #fff;
+    background-color: rgb(244,53,49);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px; ;
+}
+/*personInfor end*/
+
+/*chatSetting start*/
+.chatSetting_headImg{
+    border-radius: 50%;
+}
+/*chatSetting end*/
+
+/*chooseMember start*/
+.item.item-button-right .badge{
+    position: absolute;
+    right: 40px;
+    top: 15px;
+}
+.chooseMember_orgnav{
+    box-sizing: border-box;
+    padding: 10px;
+}
+.chooseMember_orgnav span{
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #00b0ff;
+}
+.chooseMember_search{
+    box-sizing: border-box;
+    padding: 10px 15px;
+    position: relative;
+}
+.chooseMember_search label{
+    position: absolute;
+    top: 16px;
+    left: 45%;
+}
+.chooseMember_search input{
+    border: 1px solid #ddd;
+    width: 100%;
+    border-radius: 5px;
+}
+/*chooseMember end*/
+
+
+/*login start*/
+.login_image{
+
+    margin: 50px 50px;
+    width: auto;
+    height: auto;
+}
+.login_bg{
+    background: #D1EEEE;
+}
+/*login end*/
+
+/*creategroup start*/
+.creategroup{
+    margin-top : 200px ;
+
+}
+/*creategroup end */
+/*tab  start*/
+.ion-ios-chatbubble{
+    background: url("../img/Tab%20Bar/Tab_news-_pre.png") no-repeat;
+}
+.ion-ios-chatbubble-outline{
+    background: url("../img/Tab%20Bar/Tab_news.png") no-repeat;
+}
+.ion-ios-paperplane{
+    background: url("../img/Tab%20Bar/Tab_notice_pre.png") no-repeat;
+}
+.ion-ios-paperplane-outline{
+    background: url("../img/Tab%20Bar/Tab_notice.png") no-repeat;
+}
+.ion-ios-person-outline{
+    background: url("../img/Tab%20Bar/icon_my.png") no-repeat;
+}
+.ion-ios-person{
+    background: url("../img/Tab%20Bar/icon_my_pre.png") no-repeat;
+}
+.ion-ios-people{
+    background: url("../img/Tab%20Bar/Tab_group_pre.png") no-repeat;
+    position: relative;
+    left: -1px
+}
+.ion-ios-people-outline{
+    background: url("../img/Tab%20Bar/Tab_group.png") no-repeat;
+    position: relative;
+    left: -1px
+}
+.ion-ios-people,.ion-ios-people-outline{
+    background-size: 23px 23px;
+    width: 25px;
+}
+.ion-ios-person,.ion-ios-person-outline,
+.ion-ios-paperplane,.ion-ios-paperplane-outline,
+.ion-ios-chatbubble,.ion-ios-chatbubble-outline{
+    width: 25px;
+    background-size: 25px 25px;
+}
+.tabs{
+    /*padding-top: 8px;*/
+    box-sizing: border-box;
+    height: 54px;
+}
+.tab-item .icon{
+    height: 28px;
+}
+
+/*tab  end*/
+
+/*groupfile*/
+.groupfile-p{
+
+    padding-top: 20px;
+}
+
+.groupfile-download{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    color: #8c8c8c;
+    font-size: 13px;
+}
+.groupfile-colorblue{
+    color: #4876FF;
+}
+.groupfile-filename{
+    max-width: 100px;
+    margin-top: 10px;
+    font-size: 50px;
+    color: #4876FF;
+}
+.fileBox{
+    width: 160px;
+    height: 60px;
+    border: 1px solid #2896f3;
+    /*position: absolute;*/
+    /*left: 65px;*/
+    /*top: 8px;*/
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 5px;
+    overflow: hidden;
+    ;
+}
+.fileBox .fileImg{
+    float: left;
+    padding-top: 5px;
+}
+.fileBox .fileInfo{
+    float: left;
+    width: 100px;
+    height: 60px;
+    padding-left: 4px;
+}
+.fileBox .fileInfo .fileName{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100px;
+}
+.fileBox .fileInfo .fileSize{
+
+}
+
+

@@ -1,0 +1,69 @@
+
+<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button icon-left ion-chevron-left" ui-sref="tab.message" ng-click="goback()">
+            返回
+        </button>
+    </div>
+    <div class="h1 title" ng-bind="chatTo"></div>
+    <div class="buttons">
+        <button class="button button-icon icon ion-person" ng-click="toChatSettings()"></button>
+    </div>
+</ion-header-bar>
+<ion-content id="message-detail-content" class="rj-stable-content hasfooter" ng-class="{hasexpressionandfooter:isShowExpressionPanel}" delegate-handle="messageDetailsScroll">
+	<ion-refresher pulling-text="..." on-refresh="doRefresh()" pulling-icon=""></ion-refresher>
+    <div ng-repeat="item in messageDetils" class="sendDiv">
+    	<p class="rj-message-time" ng-bind="item.time" ng-if="false"></p>
+        <!--get-->
+        <div class="rj-message-wrap" ng-if="!item.isFromeMe">
+            <img ng-src="img/me.png" class="rj-head-pic">
+            <span class="rj-triangle-left"></span>
+            <p class="rj-message" ng-bind-html="item.content">
+            </p>
+        </div>
+        <!--post-->
+        <div class="rj-message-wrap" ng-if="item.isFromeMe">
+            <img src="img/me.png" class="rj-head-pic-right">
+            <span class="rj-triangle-right"></span>
+            <p class="rj-message-right" ng-bind-html="item.content">
+            </p>
+        </div>
+    </div>
+</ion-content>
+
+
+<ion-footer-bar align-title="left" class="bar-light" ng-class="{hasexpression:isShowExpressionPanel}" resize-foot-bar>
+    <div class="rj-footer-btn-wrap">
+        <button class="button button-icon icon ion-image rj-footer-btn-left" ng-click="sendPic()">
+        </button>
+        <img  id="picture" style="display: none"  src=""/>
+    </div>
+    <label class="item item-input rj-footer-input">
+        <textarea msd-elastic ng-model="send_content">{{send_content}}</textarea>
+    </label>
+    <div class="rj-footer-btn-wrap">
+
+            <button class=" button-icon icon ion-happy-outline rj-footer-btn-left " ng-click="openExpressionPanel()"
+                    style="padding-left:0;z-index: 3;left: -5px">
+            </button>
+        </div>
+    </div>
+    <div class="rj-footer-btn-wrap">
+        <div class="buttons"  ng-show="!send_content || send_content === ''">
+            <button class="button-icon icon ion-ios-plus-outline rj-footer-btn-left "
+                    style="margin-left: -5px" >
+            </button>
+        </div>
+        <div class="rj-send-button" ng-hide="!send_content || send_content === ''" ng-click="sendMessage()">
+            <p>发送</p>
+        </div>
+    </div>
+</ion-footer-bar>
+<div class="bar footer-bar expressionPanel" ng-show="isShowExpressionPanel">
+    <div class="face-panel">
+        <span ng-repeat="face in faceData">
+            <img src="{{face.url}}" alt="" data-actionKey="{{face.actionKey}}" data-reg="{{face.reg}}" ng-click="sendface(face.actionKey)">
+        </span>
+    </div>
+</div>
+

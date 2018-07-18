@@ -1,0 +1,30 @@
+<ion-header-bar class="bar-positive" align-title="cnter">
+    <div class="title">
+        消息
+    </div>
+    <button class="button" ng-click="test()"> 跳转到测试页面</button>
+</ion-header-bar>
+<ion-view>
+    <ion-content  class="bg-gray padding-top" on-swipe-left="onSwipeLeft()">
+        <ion-list rj-close-back-drop>
+            <ion-item class="item-avatar" ng-repeat="message in messages | orderBy:['time','-deposit']:true" ng-click="messageDetils(message)">
+                <img src="img/adam.jpg"  ng-if="message.type=='chat'">
+                <h2 ng-if="message.type=='chat'">{{message.name}}  <span class="float-right">{{message.time |date : 'hh:mm'}}</span></h2>
+                <p ng-if="message.type=='chat'">{{message.content}}<span class="float-right news-cont" ng-if="message.newcount>0">{{message.newcount}}</span></p>
+                <ion-option-button ng-if="message.type=='chat'" class="button-assertive" ng-click="deleteMessage(message)" >
+                    Delete
+                </ion-option-button>
+
+                <img src="img/group.png" ng-if="message.type=='groupchat'">
+                <h2 ng-if="message.type=='groupchat'">{{message.CName}}  <span class="float-right">{{message.time |date : 'hh:mm'}}</span></h2>
+                <p ng-if="message.type=='groupchat'">{{message.content}}<span class="float-right news-cont" ng-if="message.newcount>0">{{message.newcount}}</span></p>
+                <ion-option-button ng-if="message.type=='groupchat'" class="button-assertive" ng-click="deleteMessage(message)">
+                    Delete
+                </ion-option-button>
+
+            </ion-item>
+        </ion-list>
+
+ 
+    </ion-content>
+</ion-view>

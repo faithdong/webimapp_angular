@@ -1,0 +1,20 @@
+
+<ion-header-bar align-title="left" class="bar-positive">
+    <div class="title">
+        <input type="text" ng-model="name" style="width: 100%;margin-top: 5px;padding: 2px 10px 0 10px;border-radius: 3px">
+    </div>
+    <div class="buttons">
+        <button class="button" ng-click="goBack()">取消</button>
+    </div>
+</ion-header-bar>
+
+<ion-content class="bg-gray padding-top">
+    <ion-list>
+        <ion-item class="item-avatar"
+                  ng-click="goChat(data.name)"
+                  ng-repeat="data in personData|filter:{'username':name} |limitTo:20 |orderBy :'username'">
+            <img class="head-icon" src={{(data.photo!='')?data.photophoto:"img/adam.jpg"}}>
+            <p class="find-item-name">{{data.name}}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

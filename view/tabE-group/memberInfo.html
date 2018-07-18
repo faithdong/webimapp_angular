@@ -1,0 +1,28 @@
+
+<ion-view>
+    <ion-content class="bg-gray">
+        <div class="personInforBg bg-img">
+            <a class="title" style="position: fixed;top: 10px;left: 10px;color: #fff" ng-click="return()">返回</a>
+            <div class="img"><img src={{pic}} alt="" width="80" height="80"></div>
+            <div class="name" ng-bind="name"></div>
+        </div>
+        <ion-list class="list">
+            <ion-item  class="item item-input">
+                <label class="input-label">电话</label>
+                <span ng-bind="tel"></span>
+            </ion-item>
+            <ion-item  class="item item-input">
+                <label class="input-label">邮箱</label>
+                <span ng-bind="email"></span>
+            </ion-item>
+            <ion-item  class="item item-input">
+                <label class="input-label">部门</label>
+                <span ng-bind="apart"></span>
+            </ion-item>
+        </ion-list>
+        <div class="btn-full">
+            <button class="button button-block positive-bg personInfor_fontColor" style="margin-top: 30px" ng-click="sendInfo()">发送消息</button>
+        </div>
+
+    </ion-content>
+</ion-view>

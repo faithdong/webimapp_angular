@@ -1,0 +1,28 @@
+<ion-header-bar align-title="cnter" class="bar bar-positive">
+    <h1 class="title">通知</h1>
+</ion-header-bar>
+
+<ion-content class="bg-gray">
+
+<ion-list>
+    <ion-item class="noborder bg-gray" ng-repeat="data in notifyDatas">
+        <div class="card">
+            <div class="item item-header item-icon-right">
+                财务部--王雪 <div class="icon">{{data.sendtime}}</div>
+            </div>
+            <div class="item item-text-wrap">
+                <p class="notifypre">{{data.content}}</p>
+            </div>
+            <div class="item item-icon-right"  ng-click="getDetail(data)">
+                查看详情 <i class="icon ion-chevron-right"></i>
+            </div>
+        </div>
+    </ion-item>
+</ion-list>
+    <ion-infinite-scroll
+            ng-if="moreDataCanBeLoaded()"
+            on-infinite="loadMore()"
+            distance="10%">
+    </ion-infinite-scroll>
+</ion-content>
+

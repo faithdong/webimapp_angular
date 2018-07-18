@@ -1,0 +1,33 @@
+<ion-header-bar class="bar-blue bar-positive">
+
+    <button class="button" ng-click="goback()">返回</button>
+    <div class="h1 title">群文件</div>
+
+</ion-header-bar>
+
+<ion-content>
+    <ion-list>
+        <ion-item class="item-thumbnail-left" ng-repeat="file in groupfile">
+
+            <img src="img/groupfile.png">
+
+            <h2 class="groupfile-filename">{{file.name}}</h2>
+
+            <p class=" groupfile-p" >
+                <Text>大小：{{(file.size/1024/1024.0).toFixed(3)}}M</Text> &nbsp;&nbsp;&nbsp;&nbsp;
+                <Text  >{{file.creator}}</Text>
+            </p>
+
+            <span class="rj-push-right" >{{file.createTime|date : 'MM月dd日'}}</span>
+            <span  class="groupfile-download"  >
+                <Text id="{{file.attachmentId}}"  ng-click="downloadfile(file,$index)" class="groupfile-colorblue" >下载</Text>
+                <Text style ="display :none" id = "{{$index}}">完成</Text>
+
+                <!--<a download="{{file.filename}}" href="{{file.filepath}}" target="blank">下载</a>-->
+            </span>
+
+
+        </ion-item>
+
+    </ion-list>
+</ion-content>

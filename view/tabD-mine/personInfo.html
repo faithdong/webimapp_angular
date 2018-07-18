@@ -1,0 +1,31 @@
+
+<ion-view id="newWin">
+    <ion-content class="bg-gray">
+        <div class="personInforBg bg-img">
+            <div class="img"><img id="pic" src={{src}} alt="" width="80" height="80" ng-click="setHead()" ></div>
+            <div class="name" ng-bind="name"></div>
+        </div>
+        <ion-list class="list">
+            <ion-item  class="item item-input">
+                <label class="input-label">电话</label>
+                <span ng-bind="tel"></span>
+            </ion-item>
+            <ion-item  class="item item-input">
+                <label class="input-label">邮箱</label>
+                <span ng-bind="email"></span>
+            </ion-item>
+            <ion-item  class="item item-input">
+                <label class="input-label">部门</label>
+                <span ng-bind="apart"></span>
+            </ion-item>
+            <ion-item  class="item item-input" style="margin-top: 15px">
+                <label class="input-label">版本更新</label>
+                <label class="position-r-15 input-label">{{version}}</label>
+            </ion-item>
+        </ion-list>
+        <div class="btn-full">
+            <button class="button button-block positive-bg personInfor_fontColor" style="margin-top: 30px">退出登录</button>
+        </div>
+
+    </ion-content>
+</ion-view>

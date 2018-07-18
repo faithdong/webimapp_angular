@@ -1,0 +1,21 @@
+<ion-header-bar  class="bar-positive" align-title="center">
+    <a class="icon-left ion-chevron-left button" ng-click="back()" style="font-size: 16px;letter-spacing: 1px">返回</a>
+    <h1 class="title" style="color: #fff;text-align: center">聊天记录</h1>
+</ion-header-bar>
+<ion-content class="rj-stable-content has-header" ng-class="{hasexpressionandfooter:hasexpression}" delegate-handle="messageDetailsScroll" id="message-detail-content">
+
+    <div ng-repeat="item in messageDetils" class="sendDiv">
+        <p class="rj-message-time" ng-bind="item.time"></p>
+        <div class="rj-message-wrap" ng-if="!item.isFromeMe">
+            <img src="img/me.png" class="rj-head-pic">
+            <span class="rj-triangle-left"></span>
+            <p class="rj-message" ng-bind-html="item.body.content">
+            </p>
+        </div>
+    </div>
+    <ion-infinite-scroll
+            ng-if="hasData"
+            on-infinite="loadMore()"
+            distance="1%">
+    </ion-infinite-scroll>
+</ion-content>
